@@ -28,8 +28,8 @@ gem "jbuilder"
 
 
 group :production do
-  gem 'pg' # for Heroku deployment
-  gem 'rails_12factor'
+  gem "pg" # for Heroku deployment
+  gem "rails_12factor"
 end
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
