@@ -83,6 +83,12 @@ group :development, :test do
 end
 gem 'tzinfo-data'
 
+gem 'devise'
+
 group :devlopment, :test do
   gem 'capybara'
+end
+
+group :development, :test do
+  gem 'factory_bot_rails'
 end
