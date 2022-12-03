@@ -632,3 +632,148 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.3ms | Allocations: 3572)
 
 
+Started GET "/projects/new" for 172.17.0.1 at 2022-12-03 21:49:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 9.0ms | Allocations: 4797)
+  Rendered projects/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 5528)
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 40267)
+Completed 200 OK in 98ms (Views: 82.7ms | ActiveRecord: 0.4ms | Allocations: 62100)
+
+
+Started POST "/projects" for 172.17.0.1 at 2022-12-03 21:49:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"ahhhh", "description"=>"a"}, "commit"=>"Create Project"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:27:in `block in create'
+  [1m[36mProject Create (2.8ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ahhhh"], ["description", "a"], ["created_at", "2022-12-03 21:49:45.442117"], ["updated_at", "2022-12-03 21:49:45.442117"]]
+  ↳ app/controllers/projects_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 16ms (ActiveRecord: 7.4ms | Allocations: 3788)
+
+
+Started GET "/projects/2" for 172.17.0.1 at 2022-12-03 21:49:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:63:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/_project.html.erb (Duration: 0.9ms | Allocations: 241)
+  Rendered projects/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1646)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3928)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 7156)
+
+
+Started GET "/projects" for 172.17.0.1 at 2022-12-03 21:49:53 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:6
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered projects/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3315)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 16797)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 1.1ms | Allocations: 18370)
+
+
+Started GET "/projects/new" for 172.17.0.1 at 2022-12-03 21:49:54 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 1.7ms | Allocations: 1133)
+  Rendered projects/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1222)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3406)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 3782)
+
+
+Started POST "/projects" for 172.17.0.1 at 2022-12-03 21:49:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"ahhhh", "description"=>"a"}, "commit"=>"Create Project"}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 3723)
+
+
+Started GET "/projects" for 172.17.0.1 at 2022-12-03 21:49:59 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:6
+  Rendered projects/_project.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered projects/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3314)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 1.9ms | Allocations: 3692)
+
+
+Started GET "/projects/2" for 172.17.0.1 at 2022-12-03 21:50:01 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:63:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/_project.html.erb (Duration: 0.7ms | Allocations: 19)
+  Rendered projects/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 619)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2795)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 4238)
+
+
+Started DELETE "/projects/2" for 172.17.0.1 at 2022-12-03 21:50:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:63:in `set_project'
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.1ms | Allocations: 804)
+
+
+Started DELETE "/projects/2" for 172.17.0.1 at 2022-12-03 21:50:05 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:63:in `set_project'
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms | Allocations: 827)
+
+
+Started DELETE "/projects/2" for 172.17.0.1 at 2022-12-03 21:50:05 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:63:in `set_project'
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.1ms | Allocations: 802)
+
+
+Started GET "/projects/2/edit" for 172.17.0.1 at 2022-12-03 21:50:06 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:63:in `set_project'
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms | Allocations: 735)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2022-12-03 21:50:06 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /var/lib/gems/3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 908)
+  Rendered /var/lib/gems/3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 4000)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 6367)
+Completed 200 OK in 29ms (Views: 16.6ms | ActiveRecord: 0.4ms | Allocations: 23945)
+
+
