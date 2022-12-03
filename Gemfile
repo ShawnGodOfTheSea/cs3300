@@ -86,3 +86,5 @@ gem 'tzinfo-data'
 group :devlopment, :test do
   gem 'capybara'
 end
+
+gem 'devise'
