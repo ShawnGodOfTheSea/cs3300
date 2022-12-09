@@ -88,3 +88,4 @@ group :devlopment, :test do
 end
 
 gem 'devise'
+gem "factory_bot", "~> 6.2"
