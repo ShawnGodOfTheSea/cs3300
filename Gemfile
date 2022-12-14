@@ -89,3 +89,5 @@ end
 
 gem 'devise'
 gem "factory_bot", "~> 6.2"
+gem 'bootstrap', '~> 5.2.2'
+gem 'jquery-rails'

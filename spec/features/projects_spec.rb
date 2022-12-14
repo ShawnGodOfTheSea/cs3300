@@ -1,18 +1,5 @@
 require 'rails_helper'
 
-# For Devise >= 4.2.0
-#include Devise::Test::ControllerHelpers
-# Use the following instead if you are on Devise <= 4.2.0
-# include Devise::TestHelpers
-
-#def login_admin
-#  before(:each) do
-#    @request.env["devise.mapping"] = Devise.mappings[:admin]
-#    admin = FactoryBot.create(:admin)
-#    sign_in :user, admin # sign_in(scope, resource)
-#  end
-#end
-
 RSpec.feature "Projects", type: :feature do
   context "Create new project" do
     before(:each) do

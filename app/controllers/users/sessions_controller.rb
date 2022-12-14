@@ -1,18 +1,7 @@
 # frozen_string_literal: true
 
-class [users]::SessionsController < Devise::SessionsController
+class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
-  def create
-    FactoryBot.define do
-      factory :user do
-        email { Faker::Internet.email }
-        password { "password"} 
-        password_confirmation { "password" }
-        confirmed_at { Date.today }
-      end
-    end
-  end
-  
   # GET /resource/sign_in
   # def new
   #   super

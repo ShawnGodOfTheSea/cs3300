@@ -1,14 +1,23 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Projects</h1>
+<%= link_to "New project", new_project_path %>
+<p>
+<%= link_to "Sign Up", new_user_registration_path %>
+<p>
+<p>
+<%= link_to "Sign Out", user_sign_out_path %>
+<p>
 
 <div id="projects">
+<div class="row">
   <% @projects.each do |project| %>
+    <div class="col-sm-4">
     <%= render project %>
     <p>
       <%= link_to "Show this project", project %>
     </p>
+    </div>
   <% end %>
+  </div>
 </div>
 
-<%= link_to "New project", new_project_path %>
